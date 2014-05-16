@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="{{{ package.dottedname }}}">
+
+    <!-- Zope2 initialization -->
+    <five:registerPackage package="." initialize=".initialize" />
+
+{{% if genericsetup.profile %}}
+    <!-- Register the installation GenericSetup extension profile -->
+    <genericsetup:registerProfile
+        name="default"
+        title="{{{ package.dottedname }}}"
+        directory="profiles/default"
+        description="Installs the {{{ package.dottedname }}} package"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+{{% endif %}}
+
+</configure>
