@@ -5,7 +5,7 @@ INSTALL
 
 ::
 
-    $ pip install {{{package.name}}}
+    $ pip install {{{ package.namespace }}}.{{{ package.name }}}
 
 USAGE
 =====
@@ -17,8 +17,8 @@ DEVELOP
 
 ::
 
-    $ git clone {{{package.repository}}} {{{package.name}}}
-    $ cd {{{package.name}}}
+    $ git clone {{{package.repository}}} {{{ package.namespace }}}.{{{ package.name }}}
+    $ cd {{{ package.namespace }}}.{{{ package.name }}}
     $ make
 
 RUNNING TESTS

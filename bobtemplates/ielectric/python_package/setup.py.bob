@@ -11,7 +11,7 @@ def read(*rnames):
 
 
 setup(
-    name='{{{package.name}}}',
+    name='{{{ package.namespace }}}.{{{ package.name }}}',
     version='{{{package.version}}}.dev0',
     description='{{{package.description}}}',
     long_description=read('README.rst') +

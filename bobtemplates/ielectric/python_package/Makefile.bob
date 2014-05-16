@@ -13,4 +13,4 @@ nosetests:
 
 flake8:
 	@echo "==== Running Flake8 ===="
-	@bin/flake8 {{{package.dottedname}}} *.py
+	@bin/flake8 {{{ package.namespace }}}.{{{ package.name }}} *.py
