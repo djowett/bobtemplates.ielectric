@@ -7,8 +7,7 @@ MessageFactory = MessageFactory('{{{ package.namespace }}}.{{{ package.name }}}'
 logger = logging.getLogger('{{{ package.namespace }}}.{{{ package.name }}}')
 
 {{% if genericsetup.profile %}}
-# this is required for Extensions/Install.py to work for running uninstall code
-# (remember having an uninstall profile is good practise)
+# This is required in order to run an uninstall profile thru Extensions/Install.py
 def initialize(context):
     """Initializer called when used as a Zope 2 product."""
 {{% endif %}}

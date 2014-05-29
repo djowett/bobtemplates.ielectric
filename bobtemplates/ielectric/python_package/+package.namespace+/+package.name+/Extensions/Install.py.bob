@@ -2,10 +2,12 @@ from Products.CMFCore.utils import getToolByName
 from {{{ package.namespace }}}.{{{ package.name }}} import logger
 
 def uninstall(portal, reinstall=False):
-    # Reinstall flag wil be set if user press Reinstall in ZMI / portal_quickinstaller
+    # Reinstall flag will be set if user press Reinstall in ZMI / portal_quickinstaller
     # You can switch on that as you feel appropriate
 
-    if not reinstall:
+    if reinstall:
+        logger.info("Reinstalling {{{ package.namespace }}}.{{{ package.name }}}.")
+    else:
         setup_tool = getToolByName(portal, 'portal_setup')
         setup_tool.runAllImportStepsFromProfile('profile-{{{ package.namespace }}}.{{{ package.name }}}:uninstall')
         logger.info("Uninstall of {{{ package.namespace }}}.{{{ package.name }}} complete.")
