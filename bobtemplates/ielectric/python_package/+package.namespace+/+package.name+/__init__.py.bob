@@ -1,7 +1,10 @@
 from zope.i18nmessageid import MessageFactory
+import logging
 
 # Set up the i18n message factory for our package
 MessageFactory = MessageFactory('{{{ package.namespace }}}.{{{ package.name }}}')
+
+logger = logging.getLogger('{{{ package.namespace }}}.{{{ package.name }}}')
 
 {{% if genericsetup.profile %}}
 # this is required for Extensions/Install.py to work for running uninstall code
