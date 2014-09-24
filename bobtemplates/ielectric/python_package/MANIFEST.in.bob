@@ -1,2 +1,2 @@
-graft {{{ package.namespace }}}.{{{ package.name }}}
+graft {{{ package.namespace }}}
 include *.cfg *.rst *.in LICENSE
