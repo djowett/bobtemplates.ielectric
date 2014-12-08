@@ -1,4 +1,4 @@
-This is my personal collection of templates for Python development.
+Seriously, use https://github.com/collective/bobtemplates.plone instead of this!!
 
 Usage
 =====
