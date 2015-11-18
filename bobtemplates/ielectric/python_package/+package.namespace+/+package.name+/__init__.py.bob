@@ -5,9 +5,3 @@ import logging
 MessageFactory = MessageFactory('{{{ package.namespace }}}.{{{ package.name }}}')
 
 logger = logging.getLogger('{{{ package.namespace }}}.{{{ package.name }}}')
-
-{{% if genericsetup.profile %}}
-# This is required in order to run an uninstall profile thru Extensions/Install.py
-def initialize(context):
-    """Initializer called when used as a Zope 2 product."""
-{{% endif %}}
